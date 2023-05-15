@@ -6,17 +6,23 @@
     <title>Document</title>
     <script>
         function changeElement(){
-            var first = document.getElementById("major");
-            first.style.color = "white";
-            first.style.backgroundColor = "blue";
-            first.innerHTML = "ㅍㄹㄹ텍정수 3공학ㄱ 509호"
+            var h1Arr = document.querySelectorAll("h1");
+            var bgArr = ["blue","red","purple"]
+            var textArr = ["ㅍㄹㄹ텍정수 3공학ㄱ 509호",h1Arr[1],innerHTML,h1Arr[2],innerHTML ];
+            
+            for(var i = 0; i<h1Arr.length;i++)    {
+                var el = h1Arr[i];
+                el.style.color = "white";
+                el.style.backgroundColor = bgArr[i];
+                el.innerHTML = textArr[i];
+            } 
         }
     </script>
 </head>
 <body onload="changeElement()">
     <h1 id="major">인공지능 소프트웨어</h1>
-    <h1 id="grade">1학년 </h1>
-    <h1 id="name">서지환 입니다.</h1>
+    <h1>1학년 </h1>
+    <h1>서지환 입니다.</h1>
     
 </body>
 </html>
